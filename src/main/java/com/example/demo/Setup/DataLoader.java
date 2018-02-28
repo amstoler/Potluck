@@ -45,7 +45,7 @@ public class DataLoader implements CommandLineRunner {
         user.addFoodItem(foodItem);
         userRepo.save(user);
 
-        user = new AppUser("Tim@email.com", "password", "Tim", "Timmerson", "admin");
+      /*  user = new AppUser("Tim@email.com", "password", "Tim", "Timmerson", "admin");
         user.addRole(roleRepo.findAppRoleByRoleName("ADMIN"));
         foodItem = new FoodItem("Icecream", "20", "dessert" );
         foodItemRepo.save(foodItem);
@@ -64,7 +64,7 @@ public class DataLoader implements CommandLineRunner {
         foodItem = new FoodItem("Sprite", "30", "drink");
         foodItemRepo.save(foodItem);
         user.addFoodItem(foodItem);
-        userRepo.save(user);
+        userRepo.save(user);*/
 
     }
 
