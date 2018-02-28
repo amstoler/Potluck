@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Display Items</title>
+</head>
+<body>
+<h2>Food Item List</h2>
+
+<div th:each="foodItem : ${foodItem}">
+
+    <h4 th:inline="text"> foodName: [[${foodItem.foodName}]] </h4>
+    <h4 th:inline="text"> servingSize: [[${foodItem.servingSize}]] </h4>
+    <h4 th:inline="text"> foodType: [[${foodItem.foodType}]] </h4>
+</div>
+</body>
+</html>

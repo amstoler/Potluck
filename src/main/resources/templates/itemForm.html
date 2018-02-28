@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Item Form</title>
+</head>
+<body>
+<!--Create an Item Form here-->
+
+<form th:action="@{/user/processItem}" th:method="post" th:object="${foodItem}">
+    <input type="hidden" th:field="*{id}" />
+
+    <label for="foodName"> foodName</label>
+    <input type="text" id="foodName" th:field="*{foodName}"/>
+    <span th:if="${#fields.hasErrors('foodName')}" th:errors="*{foodName}"></span>
+
+    <label for="servingSize"> servingSize</label>
+    <input type="text" id="servingSize" th:field="*{servingSize}"/>
+    <span th:if="${#fields.hasErrors('servingSize')}" th:errors="*{servingSize}"></span>
+
+    <label for="foodType"> foodType</label>
+    <input type="text" id="foodType" th:field="*{foodType}"/>
+    <span th:if="${#fields.hasErrors('foodType')}" th:errors="*{foodType}"></span>
+
+    <input type="submit" value="Submit" class="btn btn-primary" />
+
+</form>
+
+</body>
+</html>
