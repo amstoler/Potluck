@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepo extends CrudRepository<AppUser,Long> {
     AppUser findAppUserByUsername(String username);
-    AppUser findByEmail(String email);
+  /*  AppUser findByEmail(String email);
     Long countByEmail(String email);
-    Long countByUsername(String username);
+    Long countByUsername(String username);*/
 }

@@ -16,7 +16,7 @@ public class AppRole {
 
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
     private Set<AppUser> users;
-    //Instantiated in constructor to allow for additona and removal of users
+    //Instantiated in constructor to allow for additon and removal of users
     public AppRole() {this.users = new HashSet<>();}
 
     public AppRole(String roleName) {

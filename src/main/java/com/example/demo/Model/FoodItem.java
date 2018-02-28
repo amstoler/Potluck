@@ -10,9 +10,20 @@ public class FoodItem {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(name = "foodName")
     private String foodName;
+    @Column(name = "servingSize" )
     private String servingSize;
+    @Column(name = "foodType")
     private String foodType;
+
+    public Set<AppUser> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<AppUser> users) {
+        this.users = users;
+    }
 
     @ManyToMany(mappedBy = "foodItems", fetch = FetchType.LAZY)
     private Set<AppUser> users;
